@@ -50,6 +50,11 @@ class Form(QtGui.QFrame):
         self.resetBtn.clicked.connect(self.resetButton)
         self.nextBtn.clicked.connect(self.clickedButton)
 
+    def keyPressEvent(self, e):
+
+        if e.key() == QtCore.Qt.Key_Escape:
+            self.close()
+
 
 
 
