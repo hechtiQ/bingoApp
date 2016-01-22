@@ -5,7 +5,6 @@ import random
 class Form(QtGui.QFrame):
 
     def clickedButton(self):
-        print("clicked")
         while True:
             newNumber = random.randint(1,100)
             if newNumber not in self.bingoNumbers:
