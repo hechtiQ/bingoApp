@@ -14,7 +14,10 @@ class Form(QtGui.QFrame):
 
                 break
             else:
-                print("error")
+                if self.bingoNumbers.__len__() >= 99:
+                    self.LCD.setDigitCount(QtCore.QString("%1").arg(999).length())
+                    self.LCD.display(999)
+                    break
 
     def resetButton(self):
         self.bingoNumbers = set()
